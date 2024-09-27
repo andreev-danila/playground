@@ -47,10 +47,11 @@ export function SpherePath({ d, index, pathCount }: SpherePathProps) {
   }, [index, pathCount]);
 
   const animatedProps = useAnimatedProps<PathProps>(() => {
-    const stroke = interpolateColor(transition.value, inputRange, [
-      theme.colors.spherePathInitial,
-      '#3754ED',
-    ]);
+    const stroke = interpolateColor(
+      transition.value,
+      [0, 1],
+      [theme.colors.spherePathInitial, '#4B48E9'],
+    );
 
     const translate = interpolate(transition.value, inputRange, [0, -10]);
 
