@@ -33,7 +33,6 @@ export function SpherePath({ d, index, pathCount }: SpherePathProps) {
 
   const transition = useSharedValue(0);
 
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     const delay = (pathCount - index - 1) * (animationConfig.duration * 0.1);
 

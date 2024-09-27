@@ -1,5 +1,6 @@
-import { PulsatingSphere } from '@/core/pulsating-sphere';
+import Slider from './slider';
+import Sphere from './sphere';
 
 export default function HomeScreen() {
-  return <PulsatingSphere />;
+  return <Sphere />;
 }

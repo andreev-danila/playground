@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import 'react-native-reanimated';
 
 import '@/ui/theme/unistyles';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -25,8 +26,10 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-    </Stack>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+      </Stack>
+    </GestureHandlerRootView>
   );
 }
